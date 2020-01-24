@@ -7,14 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
   <title>Animated Choropleth Map of U.S. Unemployment by County</title>
-
-  
-    
       
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
-
-    
-  
 
   
     
@@ -32,9 +26,6 @@
 
   <body>
 
-    
-  
-   
 <header class="header-section ">
 
 <div class="intro-header no-img">
@@ -165,9 +156,8 @@ div.tooltip {
     .attr("y", height - 125)
     .attr("x", width)
     .text(1990);
-
   queue()
-    .defer(d3.json, "https://d3js.org/us-10m.v1.json")
+    .defer(d3.json, "https://raw.githubusercontent.com/YuhengLoh/yuhengloh.github.io/master/world-countries.json")
     .defer(d3.csv, "https://raw.githubusercontent.com/rahosbach/rahosbach.github.io/master/_data/unemployment_by_county_year.csv")
     .await(ready);
   
